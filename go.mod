@@ -10,7 +10,7 @@ require (
 	github.com/agentplexus/omnillm v0.11.0
 	github.com/agentplexus/omniobserve v0.5.1
 	github.com/agentplexus/omniserp v0.7.0
-	github.com/cloudwego/eino v0.7.29
+	github.com/cloudwego/eino v0.7.32
 	github.com/danielgtaylor/huma/v2 v2.35.0
 	github.com/go-chi/chi/v5 v5.2.4
 	github.com/go-playground/validator/v10 v10.30.1
