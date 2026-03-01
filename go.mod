@@ -14,7 +14,7 @@ require (
 	github.com/danielgtaylor/huma/v2 v2.35.0
 	github.com/go-chi/chi/v5 v5.2.4
 	github.com/go-playground/validator/v10 v10.30.1
-	github.com/grokify/mogo v0.72.7
+	github.com/grokify/mogo v0.73.0
 	github.com/jessevdk/go-flags v1.6.1
 	github.com/modelcontextprotocol/go-sdk v1.4.0
 	google.golang.org/adk v0.4.0
