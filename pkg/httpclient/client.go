@@ -22,7 +22,7 @@ func PostJSON(ctx context.Context, client *http.Client, url string, request inte
 	}
 	httpReq.Header.Set("Content-Type", "application/json")
 
-	resp, err := client.Do(httpReq)
+	resp, err := client.Do(httpReq) //nolint:gosec // G704: URL from config, not user input
 	if err != nil {
 		return fmt.Errorf("request failed: %w", err)
 	}

@@ -19,10 +19,10 @@ import (
 	"google.golang.org/adk/tool/functiontool"
 	"google.golang.org/genai"
 
-	agentbase "github.com/agentplexus/stats-agent-team/pkg/agent"
-	"github.com/agentplexus/stats-agent-team/pkg/config"
-	"github.com/agentplexus/stats-agent-team/pkg/logging"
-	"github.com/agentplexus/stats-agent-team/pkg/models"
+	agentbase "github.com/plexusone/agent-team-stats/pkg/agent"
+	"github.com/plexusone/agent-team-stats/pkg/config"
+	"github.com/plexusone/agent-team-stats/pkg/logging"
+	"github.com/plexusone/agent-team-stats/pkg/models"
 )
 
 // SynthesisAgent extracts statistics from webpage content using LLM

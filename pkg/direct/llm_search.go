@@ -13,10 +13,10 @@ import (
 	"google.golang.org/adk/model"
 	"google.golang.org/genai"
 
-	"github.com/agentplexus/stats-agent-team/pkg/config"
-	"github.com/agentplexus/stats-agent-team/pkg/llm"
-	"github.com/agentplexus/stats-agent-team/pkg/logging"
-	"github.com/agentplexus/stats-agent-team/pkg/models"
+	"github.com/plexusone/agent-team-stats/pkg/config"
+	"github.com/plexusone/agent-team-stats/pkg/llm"
+	"github.com/plexusone/agent-team-stats/pkg/logging"
+	"github.com/plexusone/agent-team-stats/pkg/models"
 )
 
 // LLMSearchService provides direct LLM-based statistics search (like ChatGPT)
@@ -201,7 +201,7 @@ func (s *LLMSearchService) verifyWithVerificationAgent(ctx context.Context, topi
 	httpReq.Header.Set("Content-Type", "application/json")
 
 	client := &http.Client{Timeout: 60 * time.Second}
-	httpResp, err := client.Do(httpReq)
+	httpResp, err := client.Do(httpReq) //nolint:gosec // G704: URL from config, not user input
 	if err != nil {
 		return nil, fmt.Errorf("verification agent request failed: %w", err)
 	}

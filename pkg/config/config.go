@@ -8,7 +8,7 @@ import (
 	"os"
 	"strconv"
 
-	akconfig "github.com/agentplexus/agentkit/config"
+	akconfig "github.com/plexusone/agentkit/config"
 )
 
 // Config holds the application configuration.

@@ -11,9 +11,9 @@ import (
 	"google.golang.org/adk/agent"
 	"google.golang.org/adk/model"
 
-	"github.com/agentplexus/stats-agent-team/pkg/config"
-	"github.com/agentplexus/stats-agent-team/pkg/llm"
-	"github.com/agentplexus/stats-agent-team/pkg/logging"
+	"github.com/plexusone/agent-team-stats/pkg/config"
+	"github.com/plexusone/agent-team-stats/pkg/llm"
+	"github.com/plexusone/agent-team-stats/pkg/logging"
 )
 
 // BaseAgent provides common functionality for all agents
@@ -88,7 +88,7 @@ func (ba *BaseAgent) FetchURL(ctx context.Context, url string, maxSizeMB int) (s
 
 	req.Header.Set("User-Agent", "StatsAgentTeam/1.0")
 
-	resp, err := ba.Client.Do(req)
+	resp, err := ba.Client.Do(req) //nolint:gosec // G704: URL provided by caller for web scraping
 	if err != nil {
 		return "", fmt.Errorf("failed to fetch URL: %w", err)
 	}

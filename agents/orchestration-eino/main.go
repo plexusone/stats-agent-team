@@ -6,9 +6,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/agentplexus/stats-agent-team/pkg/config"
-	"github.com/agentplexus/stats-agent-team/pkg/logging"
-	"github.com/agentplexus/stats-agent-team/pkg/orchestration"
+	"github.com/plexusone/agent-team-stats/pkg/config"
+	"github.com/plexusone/agent-team-stats/pkg/logging"
+	"github.com/plexusone/agent-team-stats/pkg/orchestration"
 )
 
 func main() {

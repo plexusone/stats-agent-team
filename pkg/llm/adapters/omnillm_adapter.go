@@ -6,8 +6,8 @@ import (
 	"iter"
 	"time"
 
-	"github.com/agentplexus/omnillm"
-	"github.com/agentplexus/omnillm/provider"
+	"github.com/plexusone/omnillm"
+	"github.com/plexusone/omnillm/provider"
 	"google.golang.org/adk/model"
 	"google.golang.org/genai"
 )
@@ -15,7 +15,7 @@ import (
 // OmniLLMAdapterConfig holds configuration for creating a OmniLLM adapter
 type OmniLLMAdapterConfig struct {
 	ProviderName      string
-	APIKey            string
+	APIKey            string `json:"-"` //nolint:gosec // G117: field name, not a hardcoded credential
 	ModelName         string
 	Timeout           time.Duration // HTTP timeout for API calls (0 = provider default)
 	ObservabilityHook omnillm.ObservabilityHook

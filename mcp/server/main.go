@@ -12,10 +12,10 @@ import (
 	"github.com/modelcontextprotocol/go-sdk/jsonrpc"
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 
-	"github.com/agentplexus/stats-agent-team/pkg/config"
-	"github.com/agentplexus/stats-agent-team/pkg/logging"
-	"github.com/agentplexus/stats-agent-team/pkg/models"
-	"github.com/agentplexus/stats-agent-team/pkg/orchestration"
+	"github.com/plexusone/agent-team-stats/pkg/config"
+	"github.com/plexusone/agent-team-stats/pkg/logging"
+	"github.com/plexusone/agent-team-stats/pkg/models"
+	"github.com/plexusone/agent-team-stats/pkg/orchestration"
 )
 
 const (

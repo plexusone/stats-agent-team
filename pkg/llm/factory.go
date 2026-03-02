@@ -6,22 +6,22 @@ import (
 	"log/slog"
 	"time"
 
-	"github.com/agentplexus/omnillm"
-	omnillmhook "github.com/agentplexus/omniobserve/integrations/omnillm"
-	"github.com/agentplexus/omniobserve/llmops"
 	"github.com/grokify/mogo/log/slogutil"
+	"github.com/plexusone/omnillm"
+	omnillmhook "github.com/plexusone/omniobserve/integrations/omnillm"
+	"github.com/plexusone/omniobserve/llmops"
 	"google.golang.org/adk/model"
 	"google.golang.org/adk/model/gemini"
 	"google.golang.org/genai"
 
-	"github.com/agentplexus/stats-agent-team/pkg/config"
-	"github.com/agentplexus/stats-agent-team/pkg/llm/adapters"
+	"github.com/plexusone/agent-team-stats/pkg/config"
+	"github.com/plexusone/agent-team-stats/pkg/llm/adapters"
 
 	// Import observability providers (driver registration via init())
 	// TODO: move to build tags for smaller binaries
-	_ "github.com/agentplexus/go-opik/llmops"
-	_ "github.com/agentplexus/go-phoenix/llmops"
-	_ "github.com/agentplexus/omniobserve/llmops/langfuse"
+	_ "github.com/plexusone/omniobserve/llmops/langfuse"
+	_ "github.com/plexusone/opik-go/llmops"
+	_ "github.com/plexusone/phoenix-go/llmops"
 )
 
 // ModelFactory creates LLM models based on configuration

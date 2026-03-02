@@ -21,8 +21,8 @@ import (
 	"google.golang.org/adk/tool/functiontool"
 	"google.golang.org/genai"
 
-	"github.com/agentplexus/stats-agent-team/pkg/models"
-	"github.com/agentplexus/stats-agent-team/pkg/orchestration"
+	"github.com/plexusone/agent-team-stats/pkg/models"
+	"github.com/plexusone/agent-team-stats/pkg/orchestration"
 )
 
 // A2AServer represents the A2A protocol server for the Eino Orchestration Agent.

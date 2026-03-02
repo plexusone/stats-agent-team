@@ -10,10 +10,10 @@ import (
 
 	"github.com/cloudwego/eino/compose"
 
-	"github.com/agentplexus/stats-agent-team/pkg/config"
-	"github.com/agentplexus/stats-agent-team/pkg/httpclient"
-	"github.com/agentplexus/stats-agent-team/pkg/logging"
-	"github.com/agentplexus/stats-agent-team/pkg/models"
+	"github.com/plexusone/agent-team-stats/pkg/config"
+	"github.com/plexusone/agent-team-stats/pkg/httpclient"
+	"github.com/plexusone/agent-team-stats/pkg/logging"
+	"github.com/plexusone/agent-team-stats/pkg/models"
 )
 
 // EinoOrchestrationAgent uses Eino framework for deterministic orchestration

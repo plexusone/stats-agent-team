@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/agentplexus/omniserp"
-	"github.com/agentplexus/omniserp/client"
-	"github.com/agentplexus/stats-agent-team/pkg/config"
+	"github.com/plexusone/agent-team-stats/pkg/config"
+	"github.com/plexusone/omniserp"
+	"github.com/plexusone/omniserp/client"
 )
 
 // Service provides web search capabilities using metaserp

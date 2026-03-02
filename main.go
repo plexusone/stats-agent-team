@@ -11,9 +11,9 @@ import (
 
 	"github.com/jessevdk/go-flags"
 
-	"github.com/agentplexus/stats-agent-team/pkg/config"
-	"github.com/agentplexus/stats-agent-team/pkg/logging"
-	"github.com/agentplexus/stats-agent-team/pkg/models"
+	"github.com/plexusone/agent-team-stats/pkg/config"
+	"github.com/plexusone/agent-team-stats/pkg/logging"
+	"github.com/plexusone/agent-team-stats/pkg/models"
 )
 
 var logger *slog.Logger
@@ -272,7 +272,7 @@ func callDirectLLMSearch(topic string, minStats int, verify bool) (*models.Orche
 	httpReq.Header.Set("Content-Type", "application/json")
 
 	client := &http.Client{}
-	httpResp, err := client.Do(httpReq)
+	httpResp, err := client.Do(httpReq) //nolint:gosec // G704: URL from config, not user input
 	if err != nil {
 		return nil, fmt.Errorf("request failed: %w", err)
 	}
@@ -305,7 +305,7 @@ func callOrchestrator(cfg *config.Config, req *models.OrchestrationRequest) (*mo
 	httpReq.Header.Set("Content-Type", "application/json")
 
 	client := &http.Client{}
-	httpResp, err := client.Do(httpReq)
+	httpResp, err := client.Do(httpReq) //nolint:gosec // G704: URL from config, not user input
 	if err != nil {
 		return nil, fmt.Errorf("request failed: %w", err)
 	}
