@@ -1,10 +1,63 @@
 {
-  "ir_version": "1.0",
-  "project": "stats-agent-team",
-  "repository": "https://github.com/agentplexus/stats-agent-team",
+  "irVersion": "1.0",
+  "project": "agent-team-stats",
+  "repository": "https://github.com/plexusone/agent-team-stats",
   "versioning": "semver",
-  "commit_convention": "conventional",
+  "commitConvention": "conventional",
   "releases": [
+    {
+      "version": "v0.7.0",
+      "date": "2026-03-01",
+      "highlights": [
+        { "description": "Module migrated from `agentplexus` to `plexusone` organization" },
+        { "description": "Agent plugin specifications for Kiro and Claude Code sub-agents" },
+        { "description": "MkDocs documentation restructured for GitHub Pages deployment" }
+      ],
+      "breaking": [
+        { "description": "Module path changed from `github.com/agentplexus/stats-agent-team` to `github.com/plexusone/agent-team-stats`", "commit": "800d563" }
+      ],
+      "upgradeGuide": [
+        { "description": "Update import paths from `github.com/agentplexus/stats-agent-team` to `github.com/plexusone/agent-team-stats`" },
+        { "description": "Update go.mod dependency to `github.com/plexusone/agent-team-stats v0.7.0`" }
+      ],
+      "added": [
+        { "description": "Kiro agent configuration files for local development (`plugins/kiro/agents/`)", "commit": "8005978" },
+        { "description": "Spec plugin definition with deployment targets (`plugins/spec/plugin.json`)", "commit": "8005978" },
+        { "description": "Agent specification markdown files for orchestration workflow", "commit": "8005978" }
+      ],
+      "changed": [
+        { "description": "Module path migrated from `agentplexus` to `plexusone` organization", "commit": "800d563" },
+        { "description": "All dependencies migrated from `agentplexus/*` to `plexusone/*` packages", "commit": "800d563" },
+        { "description": "CDK module updated to use `agentkit-aws-cdk v0.2.0`", "commit": "df594f7" },
+        { "description": "MkDocs source moved from `docsrc/` to `docs/` for gh-pages deployment", "commit": "514f793" }
+      ],
+      "documentation": [
+        { "description": "Updated README URLs for plexusone organization", "commit": "5598c54" },
+        { "description": "Restructured docs for `mkdocs gh-deploy` workflow", "commit": "514f793" },
+        { "description": "Updated mkdocs.yml with plexusone URLs and removed site_dir", "commit": "514f793" }
+      ],
+      "dependencies": [
+        { "description": "`github.com/plexusone/agentkit` v0.5.0 (was agentplexus/agentkit v0.4.0)", "commit": "800d563" },
+        { "description": "`github.com/plexusone/omnillm` v0.13.0 (was agentplexus/omnillm v0.11.0)", "commit": "800d563" },
+        { "description": "`github.com/plexusone/omniobserve` v0.7.0 (was agentplexus/omniobserve v0.5.1)", "commit": "800d563" },
+        { "description": "`github.com/plexusone/omniserp` v0.8.0 (was agentplexus/omniserp v0.7.0)", "commit": "800d563" },
+        { "description": "`github.com/plexusone/opik-go` v0.6.0 (was agentplexus/go-opik v0.5.1)", "commit": "800d563" },
+        { "description": "`github.com/plexusone/phoenix-go` v0.2.0 (was agentplexus/go-phoenix v0.1.1)", "commit": "800d563" },
+        { "description": "`github.com/cloudwego/eino` v0.7.32 → v0.7.36", "commit": "2e6f858" },
+        { "description": "`github.com/grokify/mogo` v0.72.7 → v0.73.3", "commit": "5cb7fba" },
+        { "description": "`github.com/go-chi/chi/v5` v5.2.4 → v5.2.5", "commit": "4ad2d66" },
+        { "description": "`github.com/modelcontextprotocol/go-sdk` v1.3.0 → v1.4.0", "commit": "7cb49ed" },
+        { "description": "`google.golang.org/genai` v1.42.0 → v1.48.0", "commit": "89b1689" },
+        { "description": "`google.golang.org/adk` v0.4.0 → v0.5.0", "commit": "800d563" },
+        { "description": "`github.com/a2aproject/a2a-go` v0.3.6 → v0.3.7", "commit": "800d563" },
+        { "description": "`github.com/plexusone/agentkit-aws-cdk` v0.2.0 (CDK module)", "commit": "df594f7" }
+      ],
+      "infrastructure": [
+        { "description": "Updated `.gitignore` to exclude `.claude/` directory", "commit": "33ff021" },
+        { "description": "Updated `cdk/.gitignore` to exclude compiled binary", "commit": "df594f7" },
+        { "description": "Bump `actions/upload-artifact` from 6 to 7", "commit": "240bca4" }
+      ]
+    },
     {
       "version": "v0.6.0",
       "date": "2026-01-18",
@@ -15,7 +68,7 @@
         { "description": "Unified configuration loading from config.json, environment variables, and OmniVault secrets via `config.Load(ctx)`", "commit": "6afdba6" },
         { "description": "AWS CDK deployment infrastructure in `cdk/` directory", "commit": "6afdba6" },
         { "description": "Runtime config files: `config.json` for local development, `config.aws.json` for AWS deployment", "commit": "6afdba6" },
-        { "description": "AWS AgentCore deployment guide (`docsrc/guides/aws-agentcore.md`)", "commit": "6afdba6" }
+        { "description": "AWS AgentCore deployment guide (`docs/guides/aws-agentcore.md`)", "commit": "6afdba6" }
       ],
       "changed": [
         { "description": "OmniLLM adapter updated for v0.11.0 unified Providers API", "commit": "8e871e7" },
