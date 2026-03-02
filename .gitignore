@@ -2,7 +2,7 @@
 .env
 .env.sh
 .envrc_aws
-.claude/settings.local.json
+.claude/
 _*
 *.tar
 *.bak
